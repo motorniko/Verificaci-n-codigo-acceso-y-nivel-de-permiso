@@ -21,10 +21,18 @@ public class Principal {
 
         securityValidation(validCode,validLevel);
     }
-    public static void  securityValidation(boolean validCode, boolean validLevel){
-        if(validCode && validLevel){
-            System.out.println("Acceso permitido");
+    public static void  securityValidation(boolean validCode, boolean validLevel) {
+        if (validCode && validLevel) {
+            System.out.println("Acceso permitido.");
         }
-        else System.out.println("chupalo");
+        else{
+            System.out.println("Acceso No permitido.");
+        }
+            if(!validCode){
+                System.out.println("El codigo de acceso ingresado no es vallido.");
+        }
+            if(!validLevel){
+                System.out.println("El nivel de acceso ingresado no es valido.");
+        }
     }
 }
